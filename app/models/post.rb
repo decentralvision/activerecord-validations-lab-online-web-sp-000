@@ -6,6 +6,13 @@ class Post < ActiveRecord::Base
   validates :title,
 end
 
+CLICK_BAIT = [
+  /Won't Believe/i,
+  /Secret/i,
+  /Top [0-9]*/i,
+  /Guess/i
+]
 
 def is_click_bait?
+
 end
