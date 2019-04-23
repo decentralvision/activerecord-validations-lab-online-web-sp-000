@@ -15,4 +15,6 @@ CLICK_BAIT = [
 
 def is_click_bait?
   if CLICK_BAIT.none? {|pattern| pattern.match title }
+    errors.add(:title, "must be clickbait")
+  end
 end
