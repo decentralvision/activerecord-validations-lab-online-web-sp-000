@@ -5,3 +5,7 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: {in: %w(Fiction Non-Fiction)}
   validates :title,
 end
+
+
+def is_click_bait?
+end
