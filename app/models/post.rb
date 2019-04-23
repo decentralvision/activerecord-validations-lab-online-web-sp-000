@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   validates :summary, length: {maximum: 250}
   validates :category, inclusion: {in: %w(Fiction Non-Fiction)}
   validates :is_click_bait?
-end
+
 
 CLICK_BAIT = [
   /Won't Believe/i,
@@ -17,4 +17,5 @@ def is_click_bait?
   if CLICK_BAIT.none? {|pattern| pattern.match title }
     errors.add(:title, "must be clickbait-y")
   end
+end
 end
