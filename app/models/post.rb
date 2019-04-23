@@ -18,4 +18,5 @@ class Post < ActiveRecord::Base
       errors.add(:title, "must be clickbait-y")
     end
   end
+
 end
