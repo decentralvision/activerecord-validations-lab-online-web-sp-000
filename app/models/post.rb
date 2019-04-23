@@ -14,5 +14,5 @@ CLICK_BAIT = [
 ]
 
 def is_click_bait?
-
+  if CLICK_BAIT.none? {|pattern| pattern.match title }
 end
